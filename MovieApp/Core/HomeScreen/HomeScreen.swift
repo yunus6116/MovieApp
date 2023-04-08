@@ -49,11 +49,13 @@ extension HomeScreen: IHomeScreen{
 
 extension HomeScreen: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        10
+        viewModel.movies.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MovieCell.reuseId, for: indexPath) as! MovieCell
+        
+        cell.setCell(movie: viewModel.movies[indexPath.item])
         return cell
     }
     

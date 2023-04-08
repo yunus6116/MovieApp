@@ -11,7 +11,7 @@ class NetworkManager{
     static let shared = NetworkManager()
     private init() {}
     
-    func download(url: URL, completion: @escaping (Result<Data,Error>)-> ()) {
+    func download(url: URL, completion: @escaping (Result<Data,Error>) -> ()) {
         URLSession.shared.dataTask(with: url) { data, response, error in
             if let error = error {
                 print(error.localizedDescription)
@@ -35,5 +35,6 @@ class NetworkManager{
             }
             completion(.success(data))
         }
+        .resume()
     }
 }

@@ -13,13 +13,6 @@ import Foundation
 struct Movie: Decodable {
     let page: Int?
     let results: [MovieResult]?
-    let totalPages, totalResults: Int?
-    
-    enum CodingKeys: String, CodingKey {
-        case page, results
-        case totalPages = "total_pages"
-        case totalResults = "total_results"
-    }
 }
 
 struct MovieResult: Decodable {
@@ -30,4 +23,13 @@ struct MovieResult: Decodable {
         case id
         case posterPath = "poster_path"
     }
+    
+    var _id: Int {
+        id ?? Int.min
+    }
+    
+    var _posterPath: String {
+        posterPath ?? ""
+    }
+    
 }
