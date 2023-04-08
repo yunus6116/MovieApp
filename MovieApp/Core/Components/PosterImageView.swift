@@ -25,11 +25,16 @@ final class PosterImageView: UIImageView {
     func getImage(movie: MovieResult){
         guard let url = URL(string: APIURLs.imageURL(posterPath: movie._posterPath)) else {return}
         
-        dataTask = URLSession.shared.dataTask(with: url) { data, _, _ in
-            guard let data = data else { return }
+        dataTask = NetworkManager.shared.get(url: url) { [weak self] result in
+            guard let self = self else { return }
             
-            DispatchQueue.main.async {
-                self.image = UIImage(data: data)
+            switch result {
+            case .success(let data):
+                DispatchQueue.main.async {
+                    self.image = UIImage(data: data)
+                }
+            case .failure(_):
+                break
             }
         }
         dataTask?.resume()

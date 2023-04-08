@@ -10,6 +10,7 @@ import UIKit
 protocol IHomeScreen: AnyObject{
     func configureVC()
     func configureCollectionView()
+    func reloadCollectionView()
 }
 
 
@@ -27,6 +28,10 @@ final class HomeScreen: UIViewController {
 }
 
 extension HomeScreen: IHomeScreen{
+    func reloadCollectionView() {
+        collectionView.reloadOnMainThread()
+    }
+    
     
     func configureCollectionView() {
         collectionView = UICollectionView(frame: .zero, collectionViewLayout: UIHelper.createHomeFlowLayout())
@@ -59,5 +64,13 @@ extension HomeScreen: UICollectionViewDelegate, UICollectionViewDataSource {
         return cell
     }
     
-    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let offsetY = scrollView.contentOffset.y
+        let contentHeight = scrollView.contentSize.height
+        let height = scrollView.frame.size.height
+        
+        if offsetY >= contentHeight - height * 2{
+            viewModel.getMovies()
+        }
+    }
 }

@@ -22,6 +22,7 @@
 		1925842529E1E7A500F0CEF5 /* CGFloat+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1925842429E1E7A500F0CEF5 /* CGFloat+Ext.swift */; };
 		1925842929E1EBF600F0CEF5 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1925842829E1EBF600F0CEF5 /* MovieCell.swift */; };
 		1925842B29E1F7D200F0CEF5 /* PosterImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1925842A29E1F7D200F0CEF5 /* PosterImageView.swift */; };
+		1925842D29E2190500F0CEF5 /* UICollectionView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1925842C29E2190500F0CEF5 /* UICollectionView+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		1925842429E1E7A500F0CEF5 /* CGFloat+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Ext.swift"; sourceTree = "<group>"; };
 		1925842829E1EBF600F0CEF5 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 		1925842A29E1F7D200F0CEF5 /* PosterImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterImageView.swift; sourceTree = "<group>"; };
+		1925842C29E2190500F0CEF5 /* UICollectionView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 			children = (
 				1925842029E1DFBD00F0CEF5 /* UIView+Ext.swift */,
 				1925842429E1E7A500F0CEF5 /* CGFloat+Ext.swift */,
+				1925842C29E2190500F0CEF5 /* UICollectionView+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 				192583FB29E1139F00F0CEF5 /* SceneDelegate.swift in Sources */,
 				1925842129E1DFBD00F0CEF5 /* UIView+Ext.swift in Sources */,
 				1925841B29E1D02F00F0CEF5 /* APIURLs.swift in Sources */,
+				1925842D29E2190500F0CEF5 /* UICollectionView+Ext.swift in Sources */,
 				1925841329E1189B00F0CEF5 /* HomeScreen.swift in Sources */,
 				1925842B29E1F7D200F0CEF5 /* PosterImageView.swift in Sources */,
 				1925841729E124DC00F0CEF5 /* Movie.swift in Sources */,
