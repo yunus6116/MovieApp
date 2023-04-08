@@ -15,4 +15,8 @@ enum APIURLs {
     static func imageURL(posterPath: String) -> String {
         "https://image.tmdb.org/t/p/w500\(posterPath)"
     }
+    
+    static func detailURL(id: Int) -> String {
+        "https://api.themoviedb.org/3/movie/\(id)?api_key=e04bb48dd8aedc038d0e25235f2456c4&language=en-US"
+    }
 }

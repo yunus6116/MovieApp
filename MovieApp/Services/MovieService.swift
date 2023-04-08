@@ -16,7 +16,21 @@ final class MovieService {
             guard let self = self else {return}
             switch result {
             case .success(let data):
-                completion(self.handleWithData(data))
+                completion(self.handleMovieWithData(data))
+            case .failure(let error):
+                self.handleWithError(error)
+            }
+        })
+    }
+    
+    func getMovieDetail(id: Int, completion: @escaping (MovieDetail?) ->()){
+        guard let url = URL(string:APIURLs.detailURL(id: id)) else {return}
+        
+        NetworkManager.shared.get(url: url, completion: {[weak self] result in
+            guard let self = self else {return}
+            switch result {
+            case .success(let data):
+                completion(self.handleMovieDetailWithData(data))
             case .failure(let error):
                 self.handleWithError(error)
             }
@@ -27,10 +41,20 @@ final class MovieService {
         print(error.localizedDescription)
     }
     
-    private func handleWithData(_ data: Data) -> [MovieResult]? {
+    private func handleMovieWithData(_ data: Data) -> [MovieResult]? {
         do {
             let movie = try JSONDecoder().decode(Movie.self, from: data)
             return movie.results
+        } catch  {
+            print(error)
+            return nil
+        }
+    }
+    
+    private func handleMovieDetailWithData(_ data: Data) -> MovieDetail? {
+        do {
+            let movie = try JSONDecoder().decode(MovieDetail.self, from: data)
+            return movie
         } catch  {
             print(error)
             return nil
