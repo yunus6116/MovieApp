@@ -20,6 +20,7 @@
 		1925842129E1DFBD00F0CEF5 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1925842029E1DFBD00F0CEF5 /* UIView+Ext.swift */; };
 		1925842329E1E58200F0CEF5 /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1925842229E1E58200F0CEF5 /* UIHelper.swift */; };
 		1925842529E1E7A500F0CEF5 /* CGFloat+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1925842429E1E7A500F0CEF5 /* CGFloat+Ext.swift */; };
+		1925842929E1EBF600F0CEF5 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1925842829E1EBF600F0CEF5 /* MovieCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		1925842029E1DFBD00F0CEF5 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
 		1925842229E1E58200F0CEF5 /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
 		1925842429E1E7A500F0CEF5 /* CGFloat+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Ext.swift"; sourceTree = "<group>"; };
+		1925842829E1EBF600F0CEF5 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 		1925841029E117ED00F0CEF5 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				1925842829E1EBF600F0CEF5 /* MovieCell.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 			files = (
 				1925841929E1CB7400F0CEF5 /* MovieService.swift in Sources */,
 				1925841529E1192100F0CEF5 /* NetworkManager.swift in Sources */,
+				1925842929E1EBF600F0CEF5 /* MovieCell.swift in Sources */,
 				192583F929E1139F00F0CEF5 /* AppDelegate.swift in Sources */,
 				1925842529E1E7A500F0CEF5 /* CGFloat+Ext.swift in Sources */,
 				1925842329E1E58200F0CEF5 /* UIHelper.swift in Sources */,
