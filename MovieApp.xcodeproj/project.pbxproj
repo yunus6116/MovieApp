@@ -16,6 +16,10 @@
 		1925841729E124DC00F0CEF5 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1925841629E124DC00F0CEF5 /* Movie.swift */; };
 		1925841929E1CB7400F0CEF5 /* MovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1925841829E1CB7400F0CEF5 /* MovieService.swift */; };
 		1925841B29E1D02F00F0CEF5 /* APIURLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1925841A29E1D02F00F0CEF5 /* APIURLs.swift */; };
+		1925841E29E1D79500F0CEF5 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1925841D29E1D79500F0CEF5 /* HomeViewModel.swift */; };
+		1925842129E1DFBD00F0CEF5 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1925842029E1DFBD00F0CEF5 /* UIView+Ext.swift */; };
+		1925842329E1E58200F0CEF5 /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1925842229E1E58200F0CEF5 /* UIHelper.swift */; };
+		1925842529E1E7A500F0CEF5 /* CGFloat+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1925842429E1E7A500F0CEF5 /* CGFloat+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +34,10 @@
 		1925841629E124DC00F0CEF5 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		1925841829E1CB7400F0CEF5 /* MovieService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieService.swift; sourceTree = "<group>"; };
 		1925841A29E1D02F00F0CEF5 /* APIURLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIURLs.swift; sourceTree = "<group>"; };
+		1925841D29E1D79500F0CEF5 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		1925842029E1DFBD00F0CEF5 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
+		1925842229E1E58200F0CEF5 /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
+		1925842429E1E7A500F0CEF5 /* CGFloat+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +70,7 @@
 		192583F729E1139F00F0CEF5 /* MovieApp */ = {
 			isa = PBXGroup;
 			children = (
+				1925841F29E1DF9D00F0CEF5 /* Extensions */,
 				1925840C29E117A300F0CEF5 /* Utilities */,
 				1925840E29E117D100F0CEF5 /* Models */,
 				1925840D29E117C400F0CEF5 /* Services */,
@@ -80,6 +89,7 @@
 			children = (
 				1925841429E1192100F0CEF5 /* NetworkManager.swift */,
 				1925841A29E1D02F00F0CEF5 /* APIURLs.swift */,
+				1925842229E1E58200F0CEF5 /* UIHelper.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -120,8 +130,18 @@
 			isa = PBXGroup;
 			children = (
 				1925841229E1189B00F0CEF5 /* HomeScreen.swift */,
+				1925841D29E1D79500F0CEF5 /* HomeViewModel.swift */,
 			);
 			path = HomeScreen;
+			sourceTree = "<group>";
+		};
+		1925841F29E1DF9D00F0CEF5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1925842029E1DFBD00F0CEF5 /* UIView+Ext.swift */,
+				1925842429E1E7A500F0CEF5 /* CGFloat+Ext.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,7 +217,11 @@
 				1925841929E1CB7400F0CEF5 /* MovieService.swift in Sources */,
 				1925841529E1192100F0CEF5 /* NetworkManager.swift in Sources */,
 				192583F929E1139F00F0CEF5 /* AppDelegate.swift in Sources */,
+				1925842529E1E7A500F0CEF5 /* CGFloat+Ext.swift in Sources */,
+				1925842329E1E58200F0CEF5 /* UIHelper.swift in Sources */,
+				1925841E29E1D79500F0CEF5 /* HomeViewModel.swift in Sources */,
 				192583FB29E1139F00F0CEF5 /* SceneDelegate.swift in Sources */,
+				1925842129E1DFBD00F0CEF5 /* UIView+Ext.swift in Sources */,
 				1925841B29E1D02F00F0CEF5 /* APIURLs.swift in Sources */,
 				1925841329E1189B00F0CEF5 /* HomeScreen.swift in Sources */,
 				1925841729E124DC00F0CEF5 /* Movie.swift in Sources */,
