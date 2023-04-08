@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  HomeScreen.swift
 //  MovieApp
 //
 //  Created by Yunus Kara on 8.04.2023.
@@ -7,13 +7,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class HomeScreen: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
+        view.backgroundColor = .systemGreen
     }
-
-
 }
-
