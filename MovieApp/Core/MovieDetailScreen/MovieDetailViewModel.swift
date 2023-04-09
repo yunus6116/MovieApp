@@ -9,6 +9,9 @@ import Foundation
 
 protocol IMovieDetailViewModel{
     var view: IMovieDetailScreen? { get set }
+    
+    func viewDidLoad()
+    //func configurePosterImageView()
 }
 
 final class MovieDetailViewModel {
@@ -17,6 +20,12 @@ final class MovieDetailViewModel {
 }
 
 extension MovieDetailViewModel: IMovieDetailViewModel{
-    
-    
+    func viewDidLoad() {
+        view?.configureVC()
+        view?.configurePosterImageView()
+        view?.getPosterImage()
+        view?.configureTitleLabel()
+        view?.configureDateLabel()
+        view?.configureOverviewLabel()
+    }
 }

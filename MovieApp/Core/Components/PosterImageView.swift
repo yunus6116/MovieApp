@@ -40,6 +40,25 @@ final class PosterImageView: UIImageView {
         dataTask?.resume()
     }
     
+    func getImage(movie: MovieDetail){
+        guard let url = URL(string: APIURLs.imageURL(posterPath: movie._posterPath)) else {return}
+        
+        dataTask = NetworkManager.shared.get(url: url) { [weak self] result in
+            guard let self = self else { return }
+            
+            switch result {
+            case .success(let data):
+                DispatchQueue.main.async {
+                    self.image = UIImage(data: data)
+                }
+            case .failure(_):
+                break
+            }
+        }
+        dataTask?.resume()
+    }
+
+    
     func cancelFetching(){
         dataTask?.cancel()
         dataTask = nil

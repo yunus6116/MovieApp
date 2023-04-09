@@ -29,4 +29,16 @@ struct MovieDetail: Decodable {
         posterPath ?? ""
     }
     
+    var _title: String {
+        title ?? "N/A"
+    }
+    
+    var _overview: String {
+        overview ?? "N/A"
+    }
+    
+    var _releaseDate: String {
+        releaseDate ?? "There is no overview!"
+    }
+    
 }
