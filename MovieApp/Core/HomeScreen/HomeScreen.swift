@@ -11,6 +11,7 @@ protocol IHomeScreen: AnyObject{
     func configureVC()
     func configureCollectionView()
     func reloadCollectionView()
+    func navigateToDetailScreen(movie: MovieDetail)
 }
 
 
@@ -28,6 +29,13 @@ final class HomeScreen: UIViewController {
 }
 
 extension HomeScreen: IHomeScreen{
+    func navigateToDetailScreen(movie: MovieDetail) {
+        DispatchQueue.main.async {
+            let detailScreen = MovieDetailScreen(movie: movie)
+            self.navigationController?.pushViewController(detailScreen, animated: true)
+        }
+    }
+    
     func reloadCollectionView() {
         collectionView.reloadOnMainThread()
     }
@@ -48,6 +56,7 @@ extension HomeScreen: IHomeScreen{
     
     func configureVC() {
         view.backgroundColor = .systemBackground
+        title = "Populer Movies 🔥"
     }
     
 }
@@ -65,7 +74,7 @@ extension HomeScreen: UICollectionViewDelegate, UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(APIURLs.detailURL(id: viewModel.movies[indexPath.item]._id))
+        viewModel.getMovieDetail(id: viewModel.movies[indexPath.item]._id)
     }
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {

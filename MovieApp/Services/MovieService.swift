@@ -16,7 +16,7 @@ final class MovieService {
             guard let self = self else {return}
             switch result {
             case .success(let data):
-                completion(self.handleMovieWithData(data))
+                completion(self.handleWithData(data))
             case .failure(let error):
                 self.handleWithError(error)
             }
@@ -30,7 +30,7 @@ final class MovieService {
             guard let self = self else {return}
             switch result {
             case .success(let data):
-                completion(self.handleMovieDetailWithData(data))
+                completion(self.handleWithData(data))
             case .failure(let error):
                 self.handleWithError(error)
             }
@@ -41,7 +41,7 @@ final class MovieService {
         print(error.localizedDescription)
     }
     
-    private func handleMovieWithData(_ data: Data) -> [MovieResult]? {
+    private func handleWithData(_ data: Data) -> [MovieResult]? {
         do {
             let movie = try JSONDecoder().decode(Movie.self, from: data)
             return movie.results
@@ -51,7 +51,8 @@ final class MovieService {
         }
     }
     
-    private func handleMovieDetailWithData(_ data: Data) -> MovieDetail? {
+    // Polymorphism 
+    private func handleWithData(_ data: Data) -> MovieDetail? {
         do {
             let movie = try JSONDecoder().decode(MovieDetail.self, from: data)
             return movie
