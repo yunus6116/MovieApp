@@ -82,10 +82,10 @@
 		192583F729E1139F00F0CEF5 /* MovieApp */ = {
 			isa = PBXGroup;
 			children = (
-				1925841F29E1DF9D00F0CEF5 /* Extensions */,
 				1925840C29E117A300F0CEF5 /* Utilities */,
-				1925840E29E117D100F0CEF5 /* Models */,
 				1925840D29E117C400F0CEF5 /* Services */,
+				1925840E29E117D100F0CEF5 /* Models */,
+				1925841F29E1DF9D00F0CEF5 /* Extensions */,
 				1925840F29E117DA00F0CEF5 /* Core */,
 				192583FA29E1139F00F0CEF5 /* SceneDelegate.swift */,
 				192583F829E1139F00F0CEF5 /* AppDelegate.swift */,

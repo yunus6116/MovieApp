@@ -55,7 +55,6 @@ final class PosterImageView: UIImageView {
                 break
             }
         }
-        dataTask?.resume()
     }
 
     
